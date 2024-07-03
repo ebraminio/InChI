@@ -38,9 +38,10 @@ class Hooks implements ParserFirstCallInitHook {
 	public function inchiHook( Parser $parser, PPFrame $frame, array $args ) {
 		return [
 			Html::rawElement(
-				"img",
+				'img',
 				[
-					"src" => "https://chemistoid.toolforge.org/InChI=$args[0]"
+					'src' => "https://chemistoid.toolforge.org/InChI=$args[0]",
+					'class' => 'skin-invert',
 				]
 			),
 			'noparse' => true,
