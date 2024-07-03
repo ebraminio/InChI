@@ -1,0 +1,39 @@
+{
+	"name": "InChI",
+	"author": "Ebrahim Byagowi",
+	"url": "https://www.mediawiki.org/wiki/Extension:InChI",
+	"description": "inchi-desc",
+	"version": "0.0.1",
+	"license-name": "GPL-2.0-or-later",
+	"type": "media",
+	"requires": {
+		"MediaWiki": ">= 1.42.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\InChI\\": "includes/"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\InChI\\Hooks"
+		}
+	},
+	"ExtensionMessagesFiles": {
+		"InChIMagic": "InChI.i18n.magic.php"
+	},
+	"MessagesDirs": {
+		"InChI": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"inchi.messages": {
+			"messages": [
+				"inchi-desc"
+			]
+		}
+	},
+	"manifest_version": 1
+}
